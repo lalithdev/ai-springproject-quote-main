@@ -1,0 +1,16 @@
+server:
+  port: 9026
+
+spring:
+  application:
+    name: historic-quote-of-the-day
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2:1b
+
+quote:
+  schedule:
+    cron: "0 0 8 * * *"
